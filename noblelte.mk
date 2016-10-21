@@ -213,7 +213,14 @@ PRODUCT_PACKAGES += \
 ###########################################################
 
 ADDITIONAL_DEFAULT_PROPERTIES += \
-    ro.debug_level=0x4948
+    ro.debug_level=0x4948 
+
+### DEBUG
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    persist.service.adb.enable=1 \
+    persist.sys.usb.config=mtp,adb
 
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk

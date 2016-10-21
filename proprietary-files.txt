@@ -1,24 +1,24 @@
 ### Bluetooth
 vendor/firmware/bcm4359B0_V0019.0000.hcd
-vendor/firmware/bcm4359B1_V0043.0055_wisol.hcd
-vendor/firmware/bcm4359B1_V0043.0055.hcd
+vendor/firmware/bcm4359B1_V0083.0000_wisol.hcd
+vendor/firmware/bcm4359B1_V0083.0000.hcd
 
 ### Wifi
 etc/wifi/bcmdhd_apsta.bin_b1
-etc/wifi/bcmdhd_apsta.bin_b90s_b1
-etc/wifi/bcmdhd_apsta.bin_c0
+#etc/wifi/bcmdhd_apsta.bin_b90s_b1
+#etc/wifi/bcmdhd_apsta.bin_c0
 etc/wifi/bcmdhd_ibss.bin_b1
-etc/wifi/bcmdhd_ibss.bin_b90s_b1
-etc/wifi/bcmdhd_ibss.bin_c0
+#etc/wifi/bcmdhd_ibss.bin_b90s_b1
+#etc/wifi/bcmdhd_ibss.bin_c0
 etc/wifi/bcmdhd_mfg.bin_b1
-etc/wifi/bcmdhd_mfg.bin_b90s_b1
-etc/wifi/bcmdhd_mfg.bin_c0
+#etc/wifi/bcmdhd_mfg.bin_b90s_b1
+#etc/wifi/bcmdhd_mfg.bin_c0
 etc/wifi/bcmdhd_mfg2.bin_b1
-etc/wifi/bcmdhd_mfg2.bin_b90s_b1
-etc/wifi/bcmdhd_mfg2.bin_c0
+#etc/wifi/bcmdhd_mfg2.bin_b90s_b1
+#etc/wifi/bcmdhd_mfg2.bin_c0
 etc/wifi/bcmdhd_sta.bin_b1
-etc/wifi/bcmdhd_sta.bin_b90s_b1
-etc/wifi/bcmdhd_sta.bin_c0
+#etc/wifi/bcmdhd_sta.bin_b90s_b1
+#etc/wifi/bcmdhd_sta.bin_c0
 etc/wifi/cred.conf
 etc/wifi/nvram_mfg.txt_b0
 etc/wifi/nvram_mfg.txt_b1
@@ -32,6 +32,7 @@ etc/wifi/nvram_net.txt_wisol_b1
 ### NFC
 etc/sec_s3fwrn5s_rfreg_for_old_hw.bin
 etc/sec_s3fwrn5s_rfreg.bin
+etc/sec_s3fwrn5s_rfreg_thl.bin
 lib/hw/nfc_nci.universal7420.so
 lib64/hw/nfc_nci.universal7420.so
 vendor/firmware/sec_s3fwrn5s_firmware.bin
@@ -53,8 +54,8 @@ vendor/firmware/companion_imx240_master_setfile.bin
 vendor/firmware/companion_imx240_mode_setfile.bin
 
 ### Audio
-etc/firmware/audience-es804-data.bin
-etc/firmware/audience-es804-fw.bin
+#etc/firmware/audience-es804-data.bin
+#etc/firmware/audience-es804-fw.bin
 etc/firmware/clearwater-dsp3-tx-nb.bin
 etc/firmware/clearwater-dsp3-tx-swb-interview.bin
 etc/firmware/clearwater-dsp3-tx-wb.bin
@@ -194,19 +195,16 @@ app/FFFFFFFF000000000000000000000001.drbin
 app/mcRegistry/07010000000000000000000000000000.tlbin
 app/mcRegistry/08130000000000000000000000000000.tlbin
 app/mcRegistry/07060000000000000000000000000000.tlbin
-app/mcRegistry/08880000000000000000000000000000.tlbin
+#app/mcRegistry/08880000000000000000000000000000.tlbin
 app/mcRegistry/00060308060501020000000000000000.tlbin
+app/mcRegistry/ffffffff000000000000000000000004.tlbin
+app/mcRegistry/ffffffff000000000000000000000005.tlbin
 app/mcRegistry/ffffffff00000000000000000000000a.tlbin
 app/mcRegistry/ffffffff00000000000000000000000b.tlbin
 app/mcRegistry/ffffffff00000000000000000000000c.tlbin
 app/mcRegistry/ffffffff00000000000000000000000d.tlbin
 app/mcRegistry/ffffffff00000000000000000000000e.tlbin
 app/mcRegistry/ffffffff00000000000000000000000f.tlbin
-app/mcRegistry/ffffffff00000000000000000000001f.tlbin
-app/mcRegistry/ffffffff00000000000000000000002a.tlbin
-app/mcRegistry/ffffffff00000000000000000000003e.tlbin
-app/mcRegistry/ffffffff000000000000000000000004.tlbin
-app/mcRegistry/ffffffff000000000000000000000005.tlbin
 app/mcRegistry/ffffffff000000000000000000000012.tlbin
 app/mcRegistry/ffffffff000000000000000000000013.tlbin
 app/mcRegistry/ffffffff000000000000000000000014.tlbin
@@ -214,15 +212,18 @@ app/mcRegistry/ffffffff000000000000000000000016.tlbin
 app/mcRegistry/ffffffff000000000000000000000017.tlbin
 app/mcRegistry/ffffffff000000000000000000000018.tlbin
 app/mcRegistry/ffffffff000000000000000000000019.tlbin
+app/mcRegistry/ffffffff00000000000000000000001f.tlbin
 app/mcRegistry/ffffffff000000000000000000000021.tlbin
 app/mcRegistry/ffffffff000000000000000000000028.tlbin
+app/mcRegistry/ffffffff00000000000000000000002a.tlbin
 app/mcRegistry/ffffffff000000000000000000000038.tlbin
+app/mcRegistry/ffffffff00000000000000000000003e.tlbin
+app/mcRegistry/ffffffff000000000000000000000041.tlbin
+app/mcRegistry/ffffffffd00000000000000000000004.tlbin
 app/mcRegistry/ffffffffd0000000000000000000000a.tlbin
 app/mcRegistry/ffffffffd0000000000000000000000e.tlbin
-app/mcRegistry/ffffffffd00000000000000000000004.tlbin
 app/mcRegistry/ffffffffd00000000000000000000014.tlbin
 app/mcRegistry/ffffffffd00000000000000000000016.tlbin
 app/mcRegistry/ffffffffd00000000000000000000017.tlbin
-app/mcRegistry/fffffffff0000000000000000000001b.tlbin
 app/mcRegistry/fffffffff0000000000000000000001b.tlbin
 app/mcRegistry/fffffffff0000000000000000000001e.tlbin
