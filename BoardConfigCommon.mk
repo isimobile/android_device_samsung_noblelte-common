@@ -3,6 +3,8 @@ LOCAL_PATH := device/samsung/noblelte-common
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
+USE_CLANG_PLATFORM_BUILD := true
+
 # Platform
 TARGET_BOARD_PLATFORM := exynos5
 TARGET_SLSI_VARIANT := cm
@@ -32,8 +34,6 @@ TARGET_BOOTLOADER_BOARD_NAME := universal7420
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
 #BOARD_KERNEL_CMDLINE := The bootloader ignores the cmdline from the boot.img
-BOARD_KERNEL_PREBUILT_DT := true
-BOARD_KERNEL_SEPARATED_DT := true
 
 # /proc/partitions * 2 (why?) * BLOCK_SIZE (512) = size in bytes
 BOARD_BOOTIMAGE_PARTITION_SIZE := 29360128
@@ -79,20 +79,7 @@ BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
 # Graphics
 USE_OPENGL_RENDERER := true
 
-# Shader cache config options
-# Maximum size of the  GLES Shaders that can be cached for reuse.
-# Increase the size if shaders of size greater than 12KB are used.
-MAX_EGL_CACHE_KEY_SIZE := 12*1024
-
-# Maximum GLES shader cache size for each app to store the compiled shader
-# binaries. Decrease the size if RAM or Flash Storage size is a limitation
-# of the device.
-MAX_EGL_CACHE_SIZE := 2048*1024
-
-# frameworks/native/services/surfaceflinger
-# Android keeps 2 surface buffers at all time in case the hwcomposer
-# misses the time to swap buffers (in cases where it takes 16ms or
-# less). Use 3 to avoid timing issues.
+# Avoid buffer swap timing issues
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 5
 
 # HDMI
@@ -103,14 +90,9 @@ BOARD_USES_SKIA_FIMGAPI := true
 
 # (G)SCALER
 BOARD_USES_SCALER := true
-BOARD_USES_DT := true
 
 # Samsung LSI OpenMAX
 COMMON_GLOBAL_CFLAGS += -DUSE_NATIVE_SEC_NV12TILED
-
-# Samsung Seiren audio
-BOARD_USE_ALP_AUDIO := true
-BOARD_USE_SEIREN_AUDIO := true
 
 # Samsung OpenMAX Video
 BOARD_USE_STOREMETADATA := true
@@ -129,6 +111,7 @@ TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Hardware
 BOARD_HARDWARE_CLASS += device/samsung/noblelte-common/cmhw
+BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 
 # WIFI
 BOARD_WPA_SUPPLICANT_DRIVER      := NL80211
@@ -153,7 +136,6 @@ BOARD_HAVE_SAMSUNG_WIFI := true
 # Charger/Healthd
 BOARD_CHARGING_MODE_BOOTING_LPM := /sys/class/power_supply/battery/batt_lp_charging
 BOARD_CHARGER_ENABLE_SUSPEND := true
-BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_CHARGER_SHOW_PERCENTAGE := true
 RED_LED_PATH := "/sys/class/leds/led_r/brightness"
 GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
